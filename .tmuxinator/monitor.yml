@@ -1,0 +1,34 @@
+# ~/.tmuxinator/monitor.yml
+# you can make as many tabs as you wish...
+
+project_name: montor
+project_root: ~/
+#socket_name: foo # Not needed.  Remove to use default socket
+#rvm: 1.9.2@rails_project
+#pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - editor:
+      layout: ec98,211x50,0,0{115x50,0,0,0,95x50,116,0[95x11,116,0,2,95x18,116,12,3,95x19,116,31,4]}
+      panes:
+        - ll
+        #- htop
+        - ssh s2.ecplaza.net
+        - ssh river.ecplaza.net
+  - php logs : 
+      layout: evenly vertical
+      panes:
+        - tail -f /Applications/MAMP/logs/php_error.log
+        - tail -f /Applications/MAMP/logs/apache_error.log
+  - external :
+      layout: evenly horizontal
+      panes:
+        - ssh wiki.ecplaza.net -p 32567
+        - 
+
+#  - shell: git pull
+#  - database: rails db
+#  - server: rails s
+#  - logs: tail -f logs/development.log
+#  - console: rails c
+#  - capistrano:
+#  - server: ssh me@myhost

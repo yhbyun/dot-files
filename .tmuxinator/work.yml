@@ -1,0 +1,62 @@
+# ~/.tmuxinator/work.yml
+# you can make as many tabs as you wish...
+
+name: work
+root: ~/
+
+# Optional. tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+#  - editor:
+#      #layout: ec98,211x50,0,0{115x50,0,0,0,95x50,116,0[95x11,116,0,2,95x18,116,12,3,95x19,116,31,4]}
+#      layout: main-vertical 
+#      panes:
+#        - ll
+#        - 
+#        - 
+
+  - work:
+      layout: tiled 
+      panes:
+        - cd work
+        - cd work
+        - cd work
+        - cd work
+
+#  - rails:
+#      pre: 
+#        - echo "test1"
+#        - echo "test2"
+#      layout: main-vertical
+#      panes:
+#        - cd work/rails;ll
+#        - cd work/rails
+#        - cd work/rails
+#
+#  - Intra: ssh wiki.ecplaza.net -p 32567
+
+#  - IDC: 
+#      layout: main-vertical 
+#      panes:
+#        - ll
+#        - ssh s2.ecplaza.net
+#        - ssh river.ecplaza.net
+
+
+#  - shell: git pull
+#  - database: rails db
+#  - server: rails s
+#  - logs: tail -f logs/development.log
+#  - console: rails c
+#  - capistrano:
+#  - server: ssh me@myhost
