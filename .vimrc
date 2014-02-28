@@ -45,6 +45,7 @@ Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'epmatsw/ag.vim'
 Bundle 'greyblake/vim-preview'
+
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -67,6 +68,21 @@ Bundle 'The-NERD-Commenter'
 
 " Vim Tmux Navigator
 Bundle 'christoomey/vim-tmux-navigator'
+
+" vim-airline
+Bundle 'bling/vim-airline'
+
+" solarized color theme
+Bundle 'altercation/vim-colors-solarized' 
+
+" vim-fugitive
+Bundle 'tpope/vim-fugitive'
+
+" promptline.vim 
+Bundle 'edkolev/promptline.vim'
+
+" tmuxline.vim
+Bundle 'edkolev/tmuxline.vim'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -278,8 +294,9 @@ set guioptions=aAce
 syntax enable
 
 let g:solarized_termtrans = 1
-"colorscheme solarized
-colorscheme idleFingers
+let g:solarized_termcolors=256
+colorscheme solarized
+"colorscheme idleFingers
 if has('gui_running')
   "Using a cool patched font for powerline
   set guifont=Menlo:h14
@@ -289,7 +306,7 @@ if has('gui_running')
   autocmd VimEnter * NERDTree
   autocmd vimenter * wincmd p
 else
-  "set background=dark
+  set background=dark
   "set mouse=a
 endif
 
@@ -344,6 +361,10 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 "autocmd FileType html,css EmmetInstall
 "let g:user_emmet_leader_key='<C-y>'
 
+" vim-airline plugin
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
+
 " colorscheme
 "colo delek
 
@@ -355,3 +376,14 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 :endif
 
 set colorcolumn=80
+
+" enable 256 colors
+set t_Co=256
+
+let g:airline#extensions#tmuxline#enabled = 0
+
+let g:tmuxline_preset = 'full'
+
+" vim-instant-markdown 동작을 위해서 OSX에서 필요 
+" https://github.com/suan/vim-instant-markdown/issues/41
+set shell=bash\ -i
