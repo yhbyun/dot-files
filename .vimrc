@@ -84,11 +84,16 @@ Bundle 'edkolev/promptline.vim'
 " tmuxline.vim
 Bundle 'edkolev/tmuxline.vim'
 
+" DirDiff plugin
+Bundle 'vim-scripts/DirDiff.vim'
+
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
+"
+
 
 filetype plugin indent on     " required!
 
