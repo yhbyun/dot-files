@@ -359,7 +359,7 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 "let g:use_zen_complete_tag = 1
 
 " ctrlp plugin
-let g:ctrlp_cmd = 'CtrlPMru'
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
 
 
 ""emmet plugin
