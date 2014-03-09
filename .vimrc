@@ -359,8 +359,10 @@ let g:CommandTCancelMap=['<ESC>','<C-c>']
 "let g:use_zen_complete_tag = 1
 
 " ctrlp plugin
+let g:ctrlp_cmd = 'CtrlPMru'
 
-" emmet plugin
+
+""emmet plugin
 " Enable just for html/css
 "let g:user_emmet_install_global = 0
 "autocmd FileType html,css EmmetInstall
