@@ -6,12 +6,14 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="cloud"
 
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source .alias
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -124,7 +126,15 @@ set -o vi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function
 
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+PATH=vendor/bin:$PATH # composer bin
+
+
+nvm use 0.10
+
 # promptline.vim 설정
 # https://github.com/edkolev/promptline.vim
-source ~/.shell_prompt.sh
+# 보기가 좀 불편 
+# source ~/.shell_prompt.sh
 
